@@ -3,7 +3,7 @@
 ## Description
 The primary goal of this project is to improve stock price forecasting and prediction by creating an effective Machine Learning Operations (MLOps) pipeline. Utilising sophisticated financial modelling methods like the GARCH and Kalman filters, the pipeline seeks to maximise model performance and increase the precision of stock volatility forecasts. In order to provide scalability and flexibility to new data and market trends, the project builds an automated pipeline that facilitates continuous integration and delivery of machine learning models. The system is able to react dynamically to shifting market conditions because of the smooth integration of fresh data made possible by this scalable MLOps architecture. In the end, this helps academics, data scientists, and financial analysts who want to use MLOps to make better investment decisions by producing forecasts that are more accurate.
 
-'''
+```bash
     .
     |-- .DS_Store
     |-- LICENSE
@@ -57,7 +57,7 @@ The primary goal of this project is to improve stock price forecasting and predi
         |-- prediction.py
     |-- src/
         |-- dataapi.py
-'''
+```
 
 ## Table of Contents
 1. [Installation](#installation)
