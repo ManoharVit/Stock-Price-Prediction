@@ -1,0 +1,44 @@
+name: GCP CI/CD Workflow
+
+steps:
+  # Step 1: Run syncgcp.yaml
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'echo "Syncing all files with GCP bucket..." && gcloud builds submit --config=.github/workflows/syncgcp.yaml'
+
+  # Step 2: Run pytest.yaml
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'echo "Running pytests.." && gcloud builds submit --config=.github/workflows/PyTest.yaml'
+
+  # Step 3: Run airflowtrigger.yaml
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'echo "Running airflow..." && gcloud builds submit --config=.github/workflows/airflowtrigger.yaml'
+
+  # Step 4: Run model.yaml
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'echo "Running model on Vertex AI..." && gcloud builds submit --config=.github/workflows/model.yaml'
+
+  # Step 5: Run train_model.yaml
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'echo "Training model on Vertex AI" && gcloud builds submit --config=.github/workflows/train_deploy.yaml'
+
+  # Step 6: Run deploy_monitor.yaml
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'echo "Deploy Model.." && gcloud builds submit --config=.github/workflows/deploy_monitor.yaml'

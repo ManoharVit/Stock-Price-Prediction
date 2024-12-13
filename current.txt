@@ -1,0 +1,638 @@
+.
+├── artifacts
+│   ├── correlation_matrix_after_removing_correlated_features.png
+│   ├── drift_detection_log.txt
+│   ├── Feature Importance for ElasticNet on Test Set.png
+│   ├── Feature Importance for Lasso on Test Set.png
+│   ├── Feature Importance for Ridge on Test Set.png
+│   └── schema.pbtxt
+├── assets
+│   ├── airflow_dags.jpeg
+│   ├── airflow_gantt.png
+│   ├── airflow_gcp.png
+│   ├── airflow_graph.jpeg
+│   ├── airflow_graph.png
+│   ├── airflow_logging.jpeg
+│   ├── airflow_pipeline.png
+│   ├── artifacts_blob.png
+│   ├── Cloud build trigger.png
+│   ├── compare_different_runs.png
+│   ├── correlation_matrix_after_removing_correlated_features.png
+│   ├── dags_run.png
+│   ├── Data_split1.png
+│   ├── detail_one_run.png
+│   ├── detect_bias_log.png
+│   ├── Drift Detection logging.png
+│   ├── email_notification.jpeg
+│   ├── gantt.jpeg
+│   ├── gcp-artifcats.png
+│   ├── GCP billing dashbgoard.png
+│   ├── gcpbucket.png
+│   ├── Github Actions CICD.png
+│   ├── github_trigger.png
+│   ├── Github Workflows.png
+│   ├── IAM roles.png
+│   ├── linear_reg_outputs.png
+│   ├── Linear Regression - Hyperparameter Sensitivity_ model__alpha.png
+│   ├── Linear Regression - Hyperparameter Sensitivity_ model__l1_ratio.png
+│   ├── Logging Dashboard.png
+│   ├── mlops10trigger.png
+│   ├── MLOps Group10 Diag.png
+│   ├── model_analysis_elasticNet.png
+│   ├── model_checkpoints.png
+│   ├── Model monitoring Anomolies.png
+│   ├── Model Monitoring notification.png
+│   ├── Model serving.png
+│   ├── Monitor details.png
+│   ├── Monitor drift detection.png
+│   ├── Monitor feature detection.png
+│   ├── overview_charts_all_runs.png
+│   ├── pca_components.png
+│   ├── results_linear_regression .png
+│   ├── save_best_model_to_gcs.png
+│   ├── test_functions.jpeg
+│   ├── trigger_cloudfun.png
+│   ├── Vertex Ai endpoints.png
+│   ├── Vertex AI jupyter notebooks.png
+│   ├── Vertex AI metadata.png
+│   ├── Vertex AI model development training.png
+│   ├── Vertex AI model registry.png
+│   ├── VM_instance.png
+│   ├── wandb_main_dashboard_overview_all_runs.png
+│   └── yfinance_time_series.png
+├── Assignments_Submissions
+│   ├── DataPipeline Phase
+│   │   ├── Airflow README.md
+│   │   ├── Notebooks README.md
+│   │   └── Project README.md
+│   ├── Model Deployment
+│   │   └── README.md
+│   ├── Model development pipeline phase
+│   │   └── README.md
+│   └── Scoping Phase
+│       ├── Data Collection Group 10.pdf
+│       ├── errors-failure Group 10.pdf
+│       ├── Group 10 Scoping Document.pdf
+│       └── user-needs group 10.pdf
+├── Assignments_Submissions.dvc
+├── current.txt
+├── current.txt.dvc
+├── data
+│   ├── ADS_Index.csv
+│   ├── fama_french.csv
+│   ├── preprocessed
+│   │   ├── final_dataset.csv
+│   │   ├── merged_original_dataset.csv
+│   │   └── preprocess_data.ipynb
+│   └── raw
+│       └── dataset.csv
+├── data.dvc
+├── dockerfile
+├── dvc_files
+├── GCP
+│   ├── application_default_credentials.json
+│   ├── bucketcsv.sh
+│   ├── deploy.yml
+│   ├── gcloud
+│   │   ├── access_tokens.db
+│   │   ├── active_config
+│   │   ├── application_default_credentials.json
+│   │   ├── config_sentinel
+│   │   ├── configurations
+│   │   │   └── config_default
+│   │   ├── credentials.db
+│   │   ├── default_configs.db
+│   │   ├── gce
+│   │   ├── legacy_credentials
+│   │   │   └── girimanohar.v@gmail.com
+│   │   │       └── adc.json
+│   │   └── logs
+│   │       ├── 2024.11.02
+│   │       │   ├── 20.37.55.605079.log
+│   │       │   ├── 20.38.38.714906.log
+│   │       │   ├── 20.41.30.275671.log
+│   │       │   ├── 20.42.08.687593.log
+│   │       │   ├── 20.42.42.750776.log
+│   │       │   └── 21.41.50.611594.log
+│   │       ├── 2024.11.03
+│   │       │   └── 21.19.58.837386.log
+│   │       ├── 2024.11.04
+│   │       │   └── 23.23.42.037233.log
+│   │       ├── 2024.11.11
+│   │       │   └── 23.46.00.507746.log
+│   │       └── 2024.11.12
+│   │           ├── 00.25.58.902976.log
+│   │           ├── 00.26.00.904522.log
+│   │           ├── 01.05.15.269098.log
+│   │           ├── 01.05.45.514427.log
+│   │           ├── 01.05.59.837488.log
+│   │           ├── 01.06.01.989998.log
+│   │           ├── 01.08.28.779757.log
+│   │           ├── 01.08.30.970295.log
+│   │           ├── 01.09.47.331817.log
+│   │           ├── 01.10.10.702675.log
+│   │           └── 01.10.12.933871.log
+│   ├── gcpbuckettree.txt
+│   ├── gcpdeploy
+│   │   ├── best_model.py
+│   │   ├── src
+│   │   │   ├── serve
+│   │   │   │   ├── Dockerfile
+│   │   │   │   ├── model_serving.ipynb
+│   │   │   │   └── predict.py
+│   │   │   └── trainer
+│   │   │       ├── Dockerfile
+│   │   │       └── train.py
+│   │   └── trainer
+│   │       ├── artifacts
+│   │       │   ├── bias_detection_resultsV2.txt
+│   │       │   ├── bias_detection.txt
+│   │       │   ├── feature_importance.png
+│   │       │   └── model.joblib
+│   │       ├── config.yaml
+│   │       ├── Dockerfile
+│   │       ├── model_serving.ipynb
+│   │       ├── train.py
+│   │       └── wandb
+│   │           ├── debug-internal.log
+│   │           ├── debug.log
+│   │           ├── latest-run
+│   │           │   ├── files
+│   │           │   │   ├── config.yaml
+│   │           │   │   ├── output.log
+│   │           │   │   ├── requirements.txt
+│   │           │   │   ├── wandb-metadata.json
+│   │           │   │   └── wandb-summary.json
+│   │           │   ├── logs
+│   │           │   │   ├── debug-core.log
+│   │           │   │   ├── debug-internal.log
+│   │           │   │   └── debug.log
+│   │           │   ├── run-0v5xt73p.wandb
+│   │           │   └── tmp
+│   │           │       └── code
+│   │           ├── run-20241204_225214-8yu3j8rv
+│   │           │   ├── files
+│   │           │   │   ├── config.yaml
+│   │           │   │   ├── output.log
+│   │           │   │   ├── requirements.txt
+│   │           │   │   ├── wandb-metadata.json
+│   │           │   │   └── wandb-summary.json
+│   │           │   ├── logs
+│   │           │   │   ├── debug-core.log
+│   │           │   │   ├── debug-internal.log
+│   │           │   │   └── debug.log
+│   │           │   ├── run-8yu3j8rv.wandb
+│   │           │   └── tmp
+│   │           │       └── code
+│   │           ├── run-20241204_225320-york2hyl
+│   │           │   ├── files
+│   │           │   │   ├── config.yaml
+│   │           │   │   ├── output.log
+│   │           │   │   ├── requirements.txt
+│   │           │   │   ├── wandb-metadata.json
+│   │           │   │   └── wandb-summary.json
+│   │           │   ├── logs
+│   │           │   │   ├── debug-core.log
+│   │           │   │   ├── debug-internal.log
+│   │           │   │   └── debug.log
+│   │           │   ├── run-york2hyl.wandb
+│   │           │   └── tmp
+│   │           │       └── code
+│   │           └── run-20241204_225424-knvuoquq
+│   │               ├── files
+│   │               │   ├── config.yaml
+│   │               │   ├── output.log
+│   │               │   ├── requirements.txt
+│   │               │   ├── wandb-metadata.json
+│   │               │   └── wandb-summary.json
+│   │               ├── logs
+│   │               │   ├── debug-core.log
+│   │               │   ├── debug-internal.log
+│   │               │   └── debug.log
+│   │               ├── run-knvuoquq.wandb
+│   │               └── tmp
+│   │                   └── code
+│   ├── README.md
+│   └── striped-graph-440017-d7-79f99f8253bc.json
+├── gcpdeploy.dvc
+├── LICENSE
+├── LICENSE.dvc
+├── models
+│   ├── cleaned_data.csv
+│   ├── FeatureEng_and_ModelBiasDetn.ipynb
+│   ├── KNN.ipynb
+│   ├── linear_regression.ipynb
+│   ├── LSTM.ipynb
+│   ├── ML Models.ipynb
+│   ├── README.md
+│   ├── RF_Model.ipynb
+│   ├── SVM.ipynb
+│   ├── XGBoost.ipynb
+│   ├── X_test_split.csv
+│   ├── X_train_split.csv
+│   └── X_validation_split.csv
+├── notebooks.dvc
+├── pipeline
+│   ├── airflow
+│   │   ├── artifacts
+│   │   │   ├── correlation_matrix_after_removing_correlated_features.png
+│   │   │   ├── Feature Importance for ElasticNet on Test Set.png
+│   │   │   ├── Feature Importance for ElasticNet.png
+│   │   │   ├── Feature Importance for Lasso on Test Set.png
+│   │   │   ├── Feature Importance for Lasso.png
+│   │   │   ├── Feature Importance for Ridge on Test Set.png
+│   │   │   ├── Feature Importance for Ridge.png
+│   │   │   ├── Linear Regression - Hyperparameter Sensitivity_ model__alpha.png
+│   │   │   ├── Linear Regression - Hyperparameter Sensitivity_ model__l1_ratio.png
+│   │   │   ├── pca_components.png
+│   │   │   └── yfinance_time_series.png
+│   │   ├── dags
+│   │   │   ├── airflow.py
+│   │   │   ├── data
+│   │   │   │   ├── ADS_index.csv
+│   │   │   │   ├── fama_french.csv
+│   │   │   │   ├── final_dataset_for_modeling.csv
+│   │   │   │   ├── FRED_Variables
+│   │   │   │   │   ├── AMERIBOR.csv
+│   │   │   │   │   ├── BAMLH0A0HYM2.csv
+│   │   │   │   │   ├── BAMLH0A0HYM2EY.csv
+│   │   │   │   │   ├── CBBTCUSD.csv
+│   │   │   │   │   ├── CBETHUSD.csv
+│   │   │   │   │   ├── DAAA.csv
+│   │   │   │   │   ├── DBAA.csv
+│   │   │   │   │   ├── DCOILBRENTEU.csv
+│   │   │   │   │   ├── DCOILWTICO.csv
+│   │   │   │   │   ├── DCPF1M.csv
+│   │   │   │   │   ├── DCPN3M.csv
+│   │   │   │   │   ├── DEXJPUS.csv
+│   │   │   │   │   ├── DEXUSEU.csv
+│   │   │   │   │   ├── DEXUSUK.csv
+│   │   │   │   │   ├── DGS10.csv
+│   │   │   │   │   ├── DGS1.csv
+│   │   │   │   │   ├── DHHNGSP.csv
+│   │   │   │   │   ├── NIKKEI225.csv
+│   │   │   │   │   ├── OBMMIJUMBO30YF.csv
+│   │   │   │   │   ├── RIFSPPFAAD90NB.csv
+│   │   │   │   │   ├── T10Y3M.csv
+│   │   │   │   │   ├── T10YIE.csv
+│   │   │   │   │   ├── T5YIE.csv
+│   │   │   │   │   ├── USRECD.csv
+│   │   │   │   │   ├── USRECDM.csv
+│   │   │   │   │   ├── USRECDP.csv
+│   │   │   │   │   └── VIXCLS.csv
+│   │   │   │   └── merged_original_dataset.csv
+│   │   │   ├── requirements.txt
+│   │   │   └── src
+│   │   │       ├── convert_column_dtype.py
+│   │   │       ├── correlation.py
+│   │   │       ├── download_data.py
+│   │   │       ├── feature_interactions.py
+│   │   │       ├── handle_missing.py
+│   │   │       ├── keep_latest_data.py
+│   │   │       ├── lagged_features.py
+│   │   │       ├── models
+│   │   │       │   ├── cleaned_data.csv
+│   │   │       │   ├── linear_regression.py
+│   │   │       │   ├── LSTM.py
+│   │   │       │   ├── model_bias_detection.py
+│   │   │       │   ├── model_sensitivity_analysis.py
+│   │   │       │   ├── model_utils.py
+│   │   │       │   ├── svr.py
+│   │   │       │   └── XGBoost.py
+│   │   │       ├── pca.py
+│   │   │       ├── plot_yfinance_time_series.py
+│   │   │       ├── remove_weekend_data.py
+│   │   │       ├── scaler.py
+│   │   │       ├── technical_indicators.py
+│   │   │       └── upload_blob.py
+│   │   ├── docker-compose.yaml
+│   │   ├── Dockerfile
+│   │   ├── dvc.lock
+│   │   ├── dvc.yaml
+│   │   ├── images_push_to_gcp.sh
+│   │   ├── logs
+│   │   │   └── scheduler
+│   │   │       ├── latest -> /opt/airflow/logs/scheduler/2024-12-02
+│   │   │       └── latest~HEAD
+│   │   ├── tests
+│   │   │   ├── test_convert_column_dtype.py
+│   │   │   ├── test_correlation.py
+│   │   │   ├── test_download_data.py
+│   │   │   ├── test_feature_interaction.py
+│   │   │   ├── test_handle_missing.py
+│   │   │   ├── test_keep_latest_data.py
+│   │   │   ├── test_lagged_features.py
+│   │   │   ├── test_pca.py
+│   │   │   ├── test_plot_yfinance_time_series.py
+│   │   │   ├── test_remove_weekend_data.py
+│   │   │   ├── test_scaler.py
+│   │   │   └── test_technical_indicators.py
+│   │   └── wandb
+│   │       ├── latest-run -> run-20241115_215718-z46bnrst
+│   │       ├── run-20241115_211624-l57amau7
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-l57amau7.wandb
+│   │       ├── run-20241115_212249-pkl9a7mt
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-pkl9a7mt.wandb
+│   │       ├── run-20241115_212432-xrpxqqpj
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-xrpxqqpj.wandb
+│   │       ├── run-20241115_212708-qmlg5wns
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-qmlg5wns.wandb
+│   │       ├── run-20241115_212913-vu840z1f
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-vu840z1f.wandb
+│   │       ├── run-20241115_215701-jcdpdy5d
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-jcdpdy5d.wandb
+│   │       ├── run-20241115_215708-13bfiift
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-13bfiift.wandb
+│   │       ├── run-20241115_215712-vbyyrfjs
+│   │       │   ├── files
+│   │       │   │   ├── config.yaml
+│   │       │   │   ├── wandb-metadata.json
+│   │       │   │   └── wandb-summary.json
+│   │       │   └── run-vbyyrfjs.wandb
+│   │       └── run-20241115_215718-z46bnrst
+│   │           ├── files
+│   │           │   ├── config.yaml
+│   │           │   ├── wandb-metadata.json
+│   │           │   └── wandb-summary.json
+│   │           └── run-z46bnrst.wandb
+│   ├── pipelinetree.txt
+│   ├── README.md
+│   └── requirements.txt
+├── README.md
+├── README.md.dvc
+├── requirements.txt
+├── requirements.txt.dvc
+├── src
+│   ├── best_model.py
+│   ├── check.py
+│   ├── Data
+│   │   ├── assets
+│   │   │   ├── correlation_matrix_after_removing_correlated_features.png
+│   │   │   ├── gcpbucket.png
+│   │   │   ├── MLOps Group10 Diag.png
+│   │   │   ├── pca_components.png
+│   │   │   └── yfinance_time_series.png
+│   │   ├── data
+│   │   │   ├── ADS_Index.csv
+│   │   │   ├── fama_french.csv
+│   │   │   └── preprocessed
+│   │   │       ├── final_dataset.csv
+│   │   │       └── merged_original_dataset.csv
+│   │   └── pipeline
+│   │       └── airflow
+│   │           ├── artifacts
+│   │           │   ├── correlation_matrix_after_removing_correlated_features.png
+│   │           │   ├── pca_components.png
+│   │           │   └── yfinance_time_series.png
+│   │           └── dags
+│   │               └── data
+│   │                   ├── ADS_index.csv
+│   │                   ├── fama_french.csv
+│   │                   ├── final_dataset.csv
+│   │                   ├── FRED_Variables
+│   │                   │   ├── AMERIBOR.csv
+│   │                   │   ├── BAMLH0A0HYM2.csv
+│   │                   │   ├── BAMLH0A0HYM2EY.csv
+│   │                   │   ├── CBBTCUSD.csv
+│   │                   │   ├── CBETHUSD.csv
+│   │                   │   ├── DAAA.csv
+│   │                   │   ├── DBAA.csv
+│   │                   │   ├── DCOILBRENTEU.csv
+│   │                   │   ├── DCOILWTICO.csv
+│   │                   │   ├── DCPF1M.csv
+│   │                   │   ├── DCPN3M.csv
+│   │                   │   ├── DEXJPUS.csv
+│   │                   │   ├── DEXUSEU.csv
+│   │                   │   ├── DEXUSUK.csv
+│   │                   │   ├── DGS10.csv
+│   │                   │   ├── DGS1.csv
+│   │                   │   ├── DHHNGSP.csv
+│   │                   │   ├── NIKKEI225.csv
+│   │                   │   ├── OBMMIJUMBO30YF.csv
+│   │                   │   ├── RIFSPPFAAD90NB.csv
+│   │                   │   ├── T10Y3M.csv
+│   │                   │   ├── T10YIE.csv
+│   │                   │   ├── T5YIE.csv
+│   │                   │   ├── USRECD.csv
+│   │                   │   ├── USRECDM.csv
+│   │                   │   ├── USRECDP.csv
+│   │                   │   └── VIXCLS.csv
+│   │                   └── merged_original_dataset.csv
+│   ├── dataapi.py
+│   ├── Datadrift_detection_updated.ipynb
+│   ├── data_preprocessing.ipynb
+│   ├── DataSchema_Stats.ipynb
+│   ├── DVC
+│   │   └── files
+│   │       └── md5
+│   │           ├── 00
+│   │           │   └── b2f65a78688d3e02cd1be5ff35b027
+│   │           ├── 01
+│   │           │   └── 0a91294324fa9455890c8664464208
+│   │           ├── 0d
+│   │           │   └── 249287c3a977c179ea4d737465e2bd
+│   │           ├── 12
+│   │           │   └── 52f4e4135d4bf2e251f51c9d3e1a15.dir
+│   │           ├── 18
+│   │           │   └── 3702fa2a04170a102fa672cba98cb3
+│   │           ├── 19
+│   │           │   └── 5212c1c883121cc27ef25b40dd1147
+│   │           ├── 1b
+│   │           │   └── 18d13c54000beb2f78fb5350a70088
+│   │           ├── 1c
+│   │           │   └── 820732fffe9a07d2b60db4d04901c0
+│   │           ├── 1d
+│   │           │   └── cce21c382ceb4196933531da242a5b
+│   │           ├── 23
+│   │           │   └── 0e90d16b6d38cbae0019d62c372ad9
+│   │           ├── 26
+│   │           │   └── 86be68201e37304512429dd69b76c1
+│   │           ├── 2e
+│   │           │   └── 55c6057ed20579173f49e53c111569
+│   │           ├── 30
+│   │           │   └── 3fb2e7171c34d3cbdbcb937d4b9dff
+│   │           ├── 33
+│   │           │   └── 16e0d18a168f00e3298ab34a72ff14
+│   │           ├── 34
+│   │           │   └── 6428a30a15dee21ff2c09c3d62e394
+│   │           ├── 38
+│   │           │   └── f500081cac37497d672f27b7ee62cf
+│   │           ├── 42
+│   │           │   └── db0f08cedf931610a5f08ef1f3bf8d.dir
+│   │           ├── 43
+│   │           │   └── b6488d7b26b6c361101f56c3b16c8d
+│   │           ├── 4c
+│   │           │   └── 69076cfca52511b91ade2a24cdc0ca
+│   │           ├── 4e
+│   │           │   └── dd5057638e102f5bc205968d4593d5.dir
+│   │           ├── 4f
+│   │           │   ├── 9887096051715bce09afa092d44053
+│   │           │   └── d0fc4fe5f72c3b70057e25d736c5b7
+│   │           ├── 51
+│   │           │   └── 8e1b0debd4fae2d25bd525c0e7e31f
+│   │           ├── 5a
+│   │           │   └── d2208d8fd1a3b09f0274d80b19853b
+│   │           ├── 62
+│   │           │   └── a27affb01d76de691ec6362e0db52c
+│   │           ├── 64
+│   │           │   └── c8fa78764ef5227db39d07722b2b58
+│   │           ├── 65
+│   │           │   ├── 87bf75a7cc1f6db67460d121a6f997
+│   │           │   └── e57926f4606c68730d243de175b219
+│   │           ├── 68
+│   │           │   └── 319992a64b2f1283bfeb516bb00e78
+│   │           ├── 69
+│   │           │   └── 414b772def6af0373789c0f4d9e97f
+│   │           ├── 6c
+│   │           │   └── 8da018fe7441094cf5282c499b457f
+│   │           ├── 6f
+│   │           │   ├── 21deb251577e14acc627a0d4f4bc60
+│   │           │   └── efc1ffdcec6975cc76d44b249c8c20
+│   │           ├── 71
+│   │           │   └── 0b22dac2ef339391b4db1d1156ffb4
+│   │           ├── 72
+│   │           │   └── 72abf9e695de989fc9b86739c1fcbf
+│   │           ├── 75
+│   │           │   ├── 0eae632c3c59a86e27e305b348106f
+│   │           │   └── 2d41c7ece58d400ef7cdee1ea861bf
+│   │           ├── 78
+│   │           │   ├── 03d509a2b02d8f0e3f68be81861920
+│   │           │   └── 9e46c042ca0078de5f5616fa148e2b
+│   │           ├── 7c
+│   │           │   ├── 605eb5473eeba85716c90631e1370f.dir
+│   │           │   └── dc250dfe088372c94e073d99e2fd86.dir
+│   │           ├── 7f
+│   │           │   └── f0d06e94a3f2a6e75f57428d739767
+│   │           ├── 86
+│   │           │   └── de7bbbe59a8c06e3a023ae95d6b385.dir
+│   │           ├── 87
+│   │           │   ├── 0e9954220f0eb7759e86786b2ddd46
+│   │           │   └── 9f94b5120a7bd92e9223fa0e40321d
+│   │           ├── 8c
+│   │           │   ├── 40a7d04c458d5516662d6ffd504b06
+│   │           │   └── 7335d21a9bf00ac32aa5736adb7bc2
+│   │           ├── 8d
+│   │           │   └── a91016c8f253eba682ceca59128026
+│   │           ├── 8e
+│   │           │   └── bdc129516a30b60742c355c73565db
+│   │           ├── 99
+│   │           │   ├── 083257c4363bbc2e460ac836f82b96.dir
+│   │           │   ├── 655d7c0717bb9bbe09b7b50e4e4420
+│   │           │   └── ccec2cde1efb45fedc35230a01b604
+│   │           ├── 9c
+│   │           │   └── cc64fec277ad2d7a9f4c1b415daf0b
+│   │           ├── a1
+│   │           │   └── ebc1bb2e0f1578241466b081371add
+│   │           ├── a6
+│   │           │   └── cd12134076daad0a2e6d00105367b6.dir
+│   │           ├── a9
+│   │           │   ├── 41b5954d549fcfef1f9d8bf4e88879
+│   │           │   ├── 49d38915cc9d7db3bbb1f36590b5ef
+│   │           │   └── 6bcade213b0c739167a8e22ca0fe38
+│   │           ├── ab
+│   │           │   └── 8aa47a45bb548cbd9c6d8efe5e5da2
+│   │           ├── ae
+│   │           │   └── 1a9eba08eaccabdb8b7be11fe405da
+│   │           ├── b3
+│   │           │   └── 18d1ddc24c377b097bffca13471b90
+│   │           ├── b4
+│   │           │   └── a1fb85f126fec761cc1dc7425662f1
+│   │           ├── b7
+│   │           │   └── 433ff54aa187dbdbd8bc5ca752c798
+│   │           ├── bc
+│   │           │   └── ca7c25f155f310e865b75e39c8cc99
+│   │           ├── bd
+│   │           │   └── 04d71b318926695e81915a7ba14726
+│   │           ├── c2
+│   │           │   └── 827c79e1fc7cf3130da44ddc2ebfa4.dir
+│   │           ├── ca
+│   │           │   ├── a520c73ea398e6a9133c7ebbb63cd8
+│   │           │   └── c6d413eafcd382ed62c4a623a6d89e
+│   │           ├── d4
+│   │           │   └── 1d8cd98f00b204e9800998ecf8427e
+│   │           ├── dd
+│   │           │   └── 9e8687243e940cb60730b3b3950da0
+│   │           ├── e1
+│   │           │   └── 46c5534f58d3c11ab1bd767912a997
+│   │           ├── e3
+│   │           │   └── 30d7fcfc691c7bee4df890e9a3fad7
+│   │           ├── e7
+│   │           │   └── 9b8402e5e91dd3191dc2bd30e2a270
+│   │           ├── eb
+│   │           │   └── bf36e2b8bb5e4001f2f1e0029f3fa2
+│   │           ├── ed
+│   │           │   └── c7e5bb869a745d327315924a20e7da
+│   │           ├── ef
+│   │           │   └── 7d94343cbecf17f1894760dd7b4af1
+│   │           ├── f0
+│   │           │   └── 5a2816635d78a2fed94f9f2b76d807.dir
+│   │           ├── f2
+│   │           │   └── b67c60a1187b88a0e75497ffde7ac3
+│   │           ├── f4
+│   │           │   └── b6a23e8f6a6cf6e54a604e58642639
+│   │           ├── f9
+│   │           │   └── bcf17402eadb8705837fb2af0c06b0.dir
+│   │           └── fc
+│   │               └── 87fa6cf06eeec52acb1712d3e2d73f
+│   ├── FeatureEng_and_ModelBiasDetn.ipynb
+│   ├── Feature Engineering.ipynb
+│   ├── feature_engineering.py
+│   ├── filesbucket.ipynb
+│   ├── GCPresorce.py
+│   ├── KNN.ipynb
+│   ├── linear_regression.ipynb
+│   ├── LSTM.ipynb
+│   ├── ML Models.ipynb
+│   ├── preprocess_data.ipynb
+│   ├── PROJECT_DATA_CLEANING.ipynb
+│   ├── README.md
+│   ├── RF_Model.ipynb
+│   ├── SVM.ipynb
+│   ├── synclocal.ipynb
+│   └── XGBoost.ipynb
+├── src.dvc
+├── striped-graph-440017-d7-79f99f8253bc.json
+├── striped-graph-440017-d7-c8fdb42bc8ba.json
+└── tests
+    ├── test_convert_column_dtype.py
+    ├── test_correlation.py
+    ├── test_download_data.py
+    ├── test_feature_interaction.py
+    ├── test_handle_missing.py
+    ├── test_keep_latest_data.py
+    ├── test_lagged_features.py
+    ├── test_pca.py
+    ├── test_plot_yfinance_time_series.py
+    ├── test_remove_weekend_data.py
+    ├── test_scaler.py
+    └── test_technical_indicators.py
+
+165 directories, 471 files

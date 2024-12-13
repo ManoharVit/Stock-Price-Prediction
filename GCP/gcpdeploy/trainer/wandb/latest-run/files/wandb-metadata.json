@@ -1,0 +1,28 @@
+{
+  "os": "Linux-5.10.0-33-cloud-amd64-x86_64-with-glibc2.31",
+  "python": "3.10.15",
+  "startedAt": "2024-12-05T23:42:06.739929Z",
+  "program": "/home/jupyter/gcpdeploy/trainer/trainV2.py",
+  "codePath": "trainV2.py",
+  "email": "vynguyen.analyst@gmail.com",
+  "root": "/home/jupyter/gcpdeploy/trainer",
+  "host": "mlops-group10",
+  "username": "jupyter",
+  "executable": "/opt/conda/bin/python",
+  "codePathLocal": "trainV2.py",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "disk": {
+    "/": {
+      "total": "105426538496",
+      "used": "10192904192"
+    }
+  },
+  "memory": {
+    "total": "16785821696"
+  },
+  "cpu": {
+    "count": 2,
+    "countLogical": 4
+  }
+}
